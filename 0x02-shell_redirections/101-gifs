@@ -1,0 +1,2 @@
+#!/bin/bash
+for file in **/*.gif; do if [[ -f "$file" ]]; then base=$(echo "$file" | rev | cut -d. -f2- | rev); echo "$base"; fi; done | sort -f
