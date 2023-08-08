@@ -1,2 +1,2 @@
 #!/bin/bash
-for file in **/*.gif; do if [[ -f "$file" ]]; then base=$(echo "$file" | rev | cut -d. -f2- | rev); echo "$base"; fi; done | sort -f
+find -type f -name "*.gif" | rev | cut -d "/" -f 1 | cut -d '.' 2- |  rev | LC_ALL=C sort -f 
